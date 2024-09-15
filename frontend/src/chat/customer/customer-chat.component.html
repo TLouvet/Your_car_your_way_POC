@@ -1,0 +1,12 @@
+<main>
+  <h1>Chat Client</h1>
+
+  <h2>Messages</h2>
+  @for (message of messages; track $index) {
+  <div class="message">
+    <p>{{message.role}}: {{message.content}}</p>
+  </div>
+  }
+
+  <app-chat-message-input (sendMessage)="onSendMessage($event)" />
+</main>

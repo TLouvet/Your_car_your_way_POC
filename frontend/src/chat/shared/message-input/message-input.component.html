@@ -1,0 +1,6 @@
+<hr />
+<p>Ecrivez votre message</p>
+<form [formGroup]="messageForm" (ngSubmit)="onSendMessage()">
+  <textarea formControlName="answer"></textarea>
+  <button type="submit" [disabled]="!messageForm.valid">Send</button>
+</form>

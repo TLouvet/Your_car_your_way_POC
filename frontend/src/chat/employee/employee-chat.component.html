@@ -1,0 +1,28 @@
+<main>
+  <h1>Chat employé</h1>
+
+  <h2>Liste de conversations</h2>
+  @if (getChatKeys().length > 0) {
+  <ul>
+    @for (chat of getChatKeys(); track chat) {
+    <li>
+      <button (click)="onConversationSelected(chat)">Conversation {{$index + 1}}</button>
+    </li>
+    }
+  </ul>
+  }
+  @else {
+  <p>Aucune conversation pour l'instant</p>
+  }
+
+
+  @for (message of getChatMessages(); track $index) {
+  <div class="message">
+    <p>{{message.role | titlecase}}: {{message.content}}</p>
+  </div>
+  }
+
+  @if (selectedConversationID) {
+  <app-chat-message-input (sendMessage)="onSendMessage($event)" />
+  }
+</main>

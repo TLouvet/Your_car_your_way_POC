@@ -1,0 +1,21 @@
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  min-height: 44px;
+  padding: 0 20px;
+  background-color: blue;
+  font-weight: bold;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: darkblue;
+  }
+}
