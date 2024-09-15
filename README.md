@@ -5,10 +5,10 @@ Il permet, pour une instance employé, de chatter avec plusieurs instances clien
 
 ## Pré-requis
 
-Node v20
-Angular V18
-Java v17
-MySQL v8
+- Node v20
+- Angular V18
+- Java v17
+- MySQL v8
 
 ## Installation et lancement du projet
 
